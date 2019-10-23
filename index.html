@@ -10,39 +10,36 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <row>
-           <nav class="navbar navbar-light bg-light">
-                <div class="container">
-                    <div class="col-4"><img class="logo-img-size rounded border-left-0" src="img/white-wolf-logo.png" width="30" height="30" alt="TEXT"></div>
-                    <div class="col-4"><a class="navbar-brand" href="#">Vanessa's Domain</a></div>
-                    <div class="col-4"></div>
-                </div>
-            </nav>
-        </row>
         <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="#"><img class="logo-img-size rounded border-left-0" src="img/white-wolf-logo.png" width="25" height="25" alt="Home"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/vharbison1" target="_blank">Github</a>
             </li>
              <li class="nav-item">
-                <a class="nav-link" href="#">Resume</a>
+                <a  class="nav-link" href="Vanessa-Harbison.pdf" download target="_blank">Resume</a>
             </li>
         </ul>
         <div class="jumbotron">
             <div class="container jumbotron-fluid">
                 <h1 class="display-3">Hello!</h1>
-                <p class="lead">Currently, I am getting professional development at DigitalCrafts with the latest and most appropriate technology.
-                    Currently, I am getting professional development at DigitalCrafts with the latest and most appropriate technology
-                    Currently, I am getting professional development at DigitalCrafts with the latest and most appropriate technology
-                    Currently, I am getting professional development at DigitalCrafts with the latest and most appropriate technology
-                </p>
+                <p class="lead">Currently, I am gaining professional development at DigitalCrafts with the latest and most appropriate technology.
+                    <p>So far..</p>
+                    <ul>
+                    <li>Learned to mirror bash on windows and utilize Power shell with command line tool installer called Scoop </li>
+                    <li>Use GIT as version control system </li>
+                    <li>Work as a team to collaborate on projects and code review to improve on better practices </li>
+                    <li>Reviewed and practiced building web applications with front-end technology - Javascript, HTML, CSS (Bootstrap). We are currently learning tools Postman, JQuery, and JQuery HTTP request library Axios.</li>
+                    </ul>
             </div>
         </div>
         <div class="card-deck">
             <div class="card">
-                <a href="https://vharbison1.github.io/rockpaperscissors/board.html" target="_blank"><img src="img/rockpaperscissorsimg.jpg" width=250 height=250 class="card-img-top" alt="Rock Paper Scissors"></a>
+                <a href="https://vharbison1.github.io/rockpaperscissors/board.html" target="_blank" name="portfolio"><img src="img/rockpaperscissorsimg.jpg" width=250 height=250 class="card-img-top" alt="Rock Paper Scissors"></a>
                 <div class="card-body">
                 <h5 class="card-title">Rock Paper Scissors</h5>
                 <p class="card-text">This is a wep app game that consist of Javascript, HTML, CSS (bootstrap).</p>
@@ -60,29 +57,42 @@
                 </div>
             </div>
             <div class="card">
-                <img src="img/placeholder.png"" class="card-img-top" alt="...">
+                <img src="img/placeholder.png"" class="card-img-top" alt="..." width=250 height=250>
                 <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Posted</small></p>
+                <p class="card-text">More projects to be continued...</p>
                 </div>
             </div>
             <div class="card">
-                <img src="img/placeholder.png"" class="card-img-top" alt="...">
+                <img src="img/placeholder.png"" class="card-img-top" alt="..." width=250 height=250>
                 <div class="card-body">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Posted</small></p>
+                <p class="card-text">More projects to be continued...</p>
                 </div>
             </div>          
         </div>
-        <div class="card bg-dark text-white">
-                <img src="img/placeholder.png" class="card-img" alt="..." height="300px">
-                <div class="card-img-overlay">
-                  <h5 class="card-title">Resume</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text">Last updated 3 mins ago</p>
-                </div>
-              </div>
+        <button type="submit" id="scrollButton" class="btn btn-warning" onclick="topFunction()">TO TOP</button>
     </body>
+    <script type="text/javascript">
+
+    //Get Scroll Button
+    var scrollButton = document.getElementById("scrollButton");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    </script>
 </html>
